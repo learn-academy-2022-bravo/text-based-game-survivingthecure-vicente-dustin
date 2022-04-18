@@ -11,48 +11,87 @@ puts 'Zombies are on the lose and it is your mission to make your way to a serie
 puts 
 puts 'Press [ENTER] to set up your player.' 
 ready = gets.chomp
+puts
 puts 'Enter your player name.'
 player_name = gets.chomp 
-# puts 'Select your weapon of choice.'
-# puts 
-# puts '1) Knife' 
-# puts '2) Shotgun'
-# puts '3) Rocket Launcher'
-# puts '4) Bat'
-# puts '5) Handgun'
+puts 
+puts
+puts 'Now type in your weapon of choice.'
+puts 
+weapon = gets.chomp 
 puts 
 puts 
-
-puts "Hello #{player_name}, you are ready to start your mission!" 
+puts
+puts "Hello #{player_name}, now that you have your #{weapon}, you are ready to start your mission!" 
 puts 
 puts 'Press [ENTER] to begin.'
 ready = gets.chomp
 puts 
 puts 
+puts 'Level 1'
+puts
+puts 'You decide the time is now to leave your house, you look left, and see a mass of zombies walking your way.' 
+puts 
+puts "With your #{weapon} at the ready, select [1] or [2] to continue"
+puts
+puts '1) You choose to engage the zombies in your attempt to pass them.' 
+puts '2) You quietly attempt to make your way around the zombies.'
 
-# Level 1
-# You decide the time is now to leave your house, you look left, and see a mass of zombies walking your way. 
+level_one_input = gets.chomp.to_i
+def level_one(userInput, userName, userWeapon) 
+    if userInput == 1
+        puts
+        puts
+        p "#{userName} clashed head on against the zombies with his #{userWeapon} and defeated all the zombies, however, #{userName} was injured in the attack and suffered serious wounds to his leg."
+    else
+        puts
+        puts
+        p "You slowly creeped your way past the zombies and made it to the first safehouse."
+    end 
 
-# Question1- 
-# With your weapon of choice, 
-# 1- you choose to engage the zombies in your attempt to pass them. 
-# 2- your quietly attempt to make your way around the zombies.
+end
+level_one(level_one_input, player_name, weapon)
+puts 
+puts 'Press [ENTER] to advance to the next level.'  
+ready = gets.chomp
+puts 
+puts 
+puts 'Level 2'
+puts 
+puts 'At the safehouse, you meet a group of rugged people who seem to be traveling together.' 
+puts 'You have rested and healed your injuries and are ready to move to the next safehouse.'
+puts 
+puts 'The group who you met at this safehouse has a different idea on how to get to the next safehouse.'
+puts 
+puts 'You must select [1] or [2] to continue'
+puts
+puts
+puts '1) Do you join and trust the group to continue the mission with them?' 
+puts '2) Eat their food and continue the mission on your own.'
+puts 
+puts 
+puts
+level_two_input = gets.chomp.to_i
+def level_two(userInput2, userWeapon2)
+    if userInput2 == 1
+        puts
+        puts
+        p "Some members of the group were quite noisy and immediately attarcted a hoard. You all run to a dead-end alley with one latter. You are first up the latter and begin to pull the next person up when the hoard catches up and devours the group alive. You must continue your travel on your own. As you arrive at the next safehouse you think to yourself, should I have ate that food?"
+    else
+        puts
+        puts
+        p "You stuffed your stomach with food and sluggishly continue on your journey. En route to the next safehouse, a zombie surprised you and lashed on to your ankle with its teeth. With your #{userWeapon2}, you kill the zombie and gruesomely amputate your foot and arrive at the next safehouse."
+    end 
 
-# if statements depending on user choice 
-# option 1 return: "#{name} clashed head on against the zombies with his #{weapon} and defeated all the zombies, however, #name was injured in the attack and suffered serious wounds to his leg."
-
-# option 2: "You slowly creeped your way past the zombies and made it to the first safehouse."
-
-# Level 2
-# At the safehouse, you meet a group of rugged people who seem to be traveling together. You have rested and healed your injuries and are ready to move to the next safehouse. The group who you met at this safehouse has a different idea on how to get to the next safehouse. Option 1 - Do you join and trust the group to continue the mission with them? 
-# Option 2- Eat their food and continue the mission on your own. 
-
-# if statements depending on user choice
-# Option 1- Some members of the group were quite noisy and immediately attarcted a hoard. You all run to a dead-end alley with one latter. You are first up the latter and begin to pull the next person up when the hoard catches up and devours the group alive. You must continue your travel on your own. As you arrive at the next safehouse you think to yourself, should I have ate that food? 
-
-# option 2- You stuffed your stomach with food and sluggishly continue on your journey. En route to the next safehouse, a zombie surprised you and lashed on to your ankle with its teeth. With your #weapon, you kill the zombie and gruesomely amputate your foot and arrive safely at the safehouse. 
-
-# Level 3
+end
+level_two(level_two_input, weapon)
+puts 
+puts 'Press [ENTER] to advance to the next level.' 
+ready = gets.chomp
+puts 
+puts 
+puts 'Level 3'
+puts 
 # From the window of this final safehouse, you can see the facility that holds the cure at the top of the hill in front of you. Between you lies a hoard of zombies surrounding and closing in on your neighbor's newborn baby. You know face your toughest decision of the journey. 
 # option 1- Quietly pass the unsuspecting zombies and consider the newborn baby as bait for your escape to the cure facility. 
 
